@@ -1,0 +1,174 @@
+/* AUTOSAR HLD Document Analysis Assistant - Automotive Engineering Theme */
+
+:root {
+    --primary-bg: #0B1120;
+    --card-bg: #1E293B;
+    --card-border: #334155;
+    --accent-blue: #38BDF8;
+    --accent-cyan: #06B6D4;
+    --accent-orange: #F97316;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --badge-high: #EF4444;
+    --badge-med: #F59E0B;
+    --badge-low: #10B981;
+}
+
+/* Force dark theme regardless of user browser setting */
+.stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+    background-color: #0B1120 !important;
+    color: #F8FAFC !important;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #0F172A !important;
+    border-right: 1px solid #1E293B !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: #F8FAFC !important;
+}
+
+/* Headings and Paragraphs */
+h1, h2, h3, h4, h5, h6 {
+    color: #F8FAFC !important;
+    font-weight: 600;
+}
+
+p, span, label, div {
+    color: #E2E8F0;
+}
+
+/* Metric and KPI Cards */
+.metric-card {
+    background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%);
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
+}
+
+.metric-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94A3B8 !important;
+    margin-bottom: 4px;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #38BDF8 !important;
+}
+
+/* Streamlit built-in metrics */
+[data-testid="stMetricValue"] {
+    color: #38BDF8 !important;
+    font-size: 1.8rem !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #94A3B8 !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+}
+
+/* Engineering Notice Banner */
+.disclaimer-banner {
+    background: rgba(239, 68, 68, 0.15) !important;
+    border-left: 4px solid #EF4444 !important;
+    padding: 12px 16px !important;
+    border-radius: 4px !important;
+    color: #FECACA !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 20px !important;
+}
+
+/* Citation Card */
+.citation-box {
+    background: #1E293B !important;
+    border: 1px solid #38BDF8 !important;
+    border-left: 4px solid #38BDF8 !important;
+    border-radius: 6px !important;
+    padding: 12px 16px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.citation-header {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #38BDF8 !important;
+    margin-bottom: 4px;
+}
+
+.citation-snippet {
+    font-size: 0.8rem;
+    color: #CBD5E1 !important;
+    font-style: italic;
+    background: #0F172A !important;
+    padding: 8px !important;
+    border-radius: 4px !important;
+}
+
+/* Confidence Badges */
+.badge-high {
+    background: rgba(16, 185, 129, 0.2) !important;
+    color: #34D399 !important;
+    border: 1px solid #10B981 !important;
+    padding: 3px 8px !important;
+    border-radius: 12px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+}
+
+.badge-med {
+    background: rgba(245, 158, 11, 0.2) !important;
+    color: #FBBF24 !important;
+    border: 1px solid #F59E0B !important;
+    padding: 3px 8px !important;
+    border-radius: 12px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+}
+
+.badge-low {
+    background: rgba(239, 68, 68, 0.2) !important;
+    color: #F87171 !important;
+    border: 1px solid #EF4444 !important;
+    padding: 3px 8px !important;
+    border-radius: 12px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+}
+
+/* Finding Card */
+.finding-card {
+    background: #1E293B !important;
+    border: 1px solid #475569 !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    margin-bottom: 14px !important;
+}
+
+.finding-title {
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    color: #F8FAFC !important;
+    margin-bottom: 6px !important;
+}
+
+/* Expanders & Forms */
+[data-testid="stExpander"] {
+    background-color: #1E293B !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+}
+
+/* Tables / DataFrames */
+[data-testid="stDataFrame"] {
+    border: 1px solid #334155 !important;
+    border-radius: 6px !important;
+}

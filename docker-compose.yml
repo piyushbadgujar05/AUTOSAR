@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  autosar-assistant:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autosar_hld_assistant
+    ports:
+      - "8000:8000"  # FastAPI Backend
+      - "8501:8501"  # Streamlit Frontend
+    environment:
+      - LLM_PROVIDER=mock
+      - LLM_MODEL=llama3.1
+      - USE_FAST_EMBEDDINGS=1
+      - CHROMA_PATH=/app/data/chroma
+      - DATABASE_URL=sqlite:////app/data/autosar.db
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

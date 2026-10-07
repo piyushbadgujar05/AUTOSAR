@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "question": "What are the main components?",
+    "expected_entities": ["CameraManager", "RadarProcessor", "SensorFusion", "ADASController", "BrakeController", "VehicleInterface"],
+    "expected_pages": [3, 4, 5, 6],
+    "expected_answer_keywords": ["CameraManager", "RadarProcessor", "SensorFusion", "ADASController", "BrakeController"]
+  },
+  {
+    "id": 2,
+    "question": "What interface connects ADASController and BrakeController?",
+    "expected_entities": ["ADASController", "BrakeController", "BrakeCommand", "BrakeControlCommand"],
+    "expected_pages": [5, 6, 7, 8],
+    "expected_answer_keywords": ["BrakeCommand", "BrakeController"]
+  },
+  {
+    "id": 3,
+    "question": "What does SensorFusion provide?",
+    "expected_entities": ["SensorFusion", "FusedObjectData"],
+    "expected_pages": [4, 5, 7],
+    "expected_answer_keywords": ["FusedObjectData", "target", "objects"]
+  },
+  {
+    "id": 4,
+    "question": "Which component consumes CameraData?",
+    "expected_entities": ["CameraManager", "SensorFusion", "CameraData"],
+    "expected_pages": [3, 4, 7],
+    "expected_answer_keywords": ["SensorFusion", "CameraData"]
+  },
+  {
+    "id": 5,
+    "question": "Are there undefined interfaces?",
+    "expected_entities": ["ObjectFusionStatus", "EmergencyBrakeOverride", "SensorHealthHeartbeat"],
+    "expected_pages": [4, 5, 8],
+    "expected_answer_keywords": ["ObjectFusionStatus", "undefined", "interface"]
+  },
+  {
+    "id": 6,
+    "question": "What interfaces does ADASController use?",
+    "expected_entities": ["ADASController", "FusedObjectData", "VehicleState", "BrakeCommand"],
+    "expected_pages": [5, 6, 7],
+    "expected_answer_keywords": ["FusedObjectData", "VehicleState", "BrakeCommand"]
+  },
+  {
+    "id": 7,
+    "question": "Which components depend on SensorFusion?",
+    "expected_entities": ["ADASController", "SensorFusion"],
+    "expected_pages": [4, 5],
+    "expected_answer_keywords": ["ADASController", "SensorFusion"]
+  },
+  {
+    "id": 8,
+    "question": "What changed between v1.0 and v2.0?",
+    "expected_entities": ["SensorFusion", "SensorFusionV2", "BrakeCommand", "BrakeControlCommand"],
+    "expected_pages": [1, 4, 6],
+    "expected_answer_keywords": ["SensorFusionV2", "BrakeControlCommand", "version"]
+  },
+  {
+    "id": 9,
+    "question": "Show me all references to BrakeController.",
+    "expected_entities": ["BrakeController", "ADASController", "BrakeCommand"],
+    "expected_pages": [5, 6, 7],
+    "expected_answer_keywords": ["BrakeController", "deceleration", "actuation"]
+  },
+  {
+    "id": 10,
+    "question": "What protocol is used for CameraManager transmission?",
+    "expected_entities": ["CameraManager", "Ethernet"],
+    "expected_pages": [2, 3, 7],
+    "expected_answer_keywords": ["Ethernet", "100BASE-T1"]
+  },
+  {
+    "id": 11,
+    "question": "What protocol connects RadarProcessor to SensorFusion?",
+    "expected_entities": ["RadarProcessor", "CAN-FD", "CAN"],
+    "expected_pages": [2, 3, 7],
+    "expected_answer_keywords": ["CAN", "CAN-FD"]
+  },
+  {
+    "id": 12,
+    "question": "What does CameraManager do?",
+    "expected_entities": ["CameraManager", "CameraData"],
+    "expected_pages": [3],
+    "expected_answer_keywords": ["CameraManager", "video", "optical"]
+  },
+  {
+    "id": 13,
+    "question": "What signals are contained in VehicleState?",
+    "expected_entities": ["VehicleState", "WheelSpeed", "YawRate", "SteeringAngle"],
+    "expected_pages": [5, 7],
+    "expected_answer_keywords": ["WheelSpeed", "YawRate", "VehicleState"]
+  },
+  {
+    "id": 14,
+    "question": "What safety standard does this architecture comply with?",
+    "expected_entities": ["ISO 26262", "ASIL-D"],
+    "expected_pages": [2],
+    "expected_answer_keywords": ["ISO 26262", "ASIL"]
+  },
+  {
+    "id": 15,
+    "question": "What is the maximum end-to-end latency requirement?",
+    "expected_entities": ["Latency", "ADASController"],
+    "expected_pages": [2],
+    "expected_answer_keywords": ["20ms", "latency"]
+  },
+  {
+    "id": 16,
+    "question": "What are the primary functional capabilities of this ADAS system?",
+    "expected_entities": ["AEB", "ACC", "LCA"],
+    "expected_pages": [2],
+    "expected_answer_keywords": ["AEB", "ACC", "Autonomous Emergency Braking"]
+  }
+]
